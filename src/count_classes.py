@@ -2,9 +2,13 @@ import pandas as pd
 import click
 
 @click.command()
-@click.argument('file_path')
-@click.argument('class_col')
-@click.argument('output_file')
+# @click.argument('file_path')
+# @click.argument('class_col')
+# @click.argument('output_file')
+@click.option('--file_path', type=str)
+@click.option('--class_col', type=str)
+@click.option('--output_file', type=str)
+
 
 def main(file_path, class_col, output_file):
     # read in wisconsin breast cancer data
